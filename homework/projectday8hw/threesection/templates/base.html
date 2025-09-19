@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PROJECT DAY 8 HOMEWORK</h1>
+      <a href="{% url 'home' %}">HOME</a>
+      <a href="{% url 'aboutus'  %}">ABOUT US</a>
+      <a href="{% url 'contact' %}">CONTACT US</a>  
+
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <h3>NOTICE!</h3>
+        <ul>
+            <li>"Website will be under maintenance this Saturday"</li>
+            <li>"New blog section coming soon!"</li>
+            <li>"Contact us for more information"</li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

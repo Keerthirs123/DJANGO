@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>All Customers</h2>
+<ul>
+  {% for c in customers %}
+    <li>{{ c.name }} - {{ c.email }}</li>
+  {% empty %}
+    <li>No customers yet</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
