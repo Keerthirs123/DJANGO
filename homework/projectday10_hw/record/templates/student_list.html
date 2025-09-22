@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Student-list</h1>
+<form method="get" action="">
+    <input type="text" name="q" value="{{query}}" placeholder="Search name">
+    <button type="submit">Search</button>
+</form>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Standard</th>
+        <th>Age</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.standard }}</td>
+        <td>{{ student.age }}</td>
+        <td>
+            <a href="{% url 'student_edit' student.id %}">Edit</a>
+            <a href="{% url 'student_delete' student.id %}">Delete</a>
+        </td>
+    </tr>
+    
+    {% endfor %}
+</table>
+{% endblock %}
