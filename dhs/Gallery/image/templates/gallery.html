@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'image/style.css' %}">
+    
+
 </head>
 <body>
     <h1>My Image Gallery</h1>
-    <img class="img1" src="{% static 'image1.png' %}" alt="Image 1" width="300">
-    <img class="img2" src="{% static 'image2.png' %}" alt="Image 2" width="300">
-    <img class="img3" src="{% static 'image3.png' %}" alt="Image 3" width="300">
-
+    <a href="{%url 'contact' %}">Contact me</a>
+    <img class="img1" src="{% static 'image/image1.png' %}" alt="Image 1" width="300">
+    <p>This is a beautiful scenery of two deers enjoying their<br> evening . </p>
+    <img class="img2" src="{% static 'image/image2.png' %}" alt="Image 2" width="300">
+    <p>This picture shows a mother giraffe and baby giraffe <br> enjoying their evening near a beautiful lake.</p>
+    <img class="img3" src="{% static 'image/image3.png' %}" alt="Image 3" width="300">
+    <p>This picture is a evening of kerala. A beautiful <br>seaside of Kerala during sunset. </p>
 
     
 </body>

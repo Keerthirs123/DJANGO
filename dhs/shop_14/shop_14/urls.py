@@ -21,7 +21,7 @@ from shoppy import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('add_product/', views.add_product, name='add_product'),
-    path('<int/pk>/', views.product_details, name='product_details'),
-    path('<int:pk>/', views.pdf_download, name='pdf_download'), 
-    path('<int:pk>/', views.send_email, name='send_email'),
+    path('ab/<int:pk>/', views.product_details, name='product_details'),
+    path('b/<int:pk>/', views.pdf_download, name='pdf_download'), 
+    path('send/<int:pk>/', views.send_email, name='send_email'),
 ]

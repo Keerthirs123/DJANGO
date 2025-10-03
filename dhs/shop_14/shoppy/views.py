@@ -4,7 +4,7 @@ from .models import Product
 from .forms import ProductForm
 from xhtml2pdf import pisa
 from django.template.loader import get_template
-from django.core.mail import EmailMessage
+from django.core.mail import send_mail
 
 # Create your views here.
 def add_product(request):
@@ -13,8 +13,8 @@ def add_product(request):
         if form.is_valid():
             product=form.save()
             return redirect('product_details', pk=product.pk)
-        else:
-            form = ProductForm()
+    else:
+        form = ProductForm()
     return render(request, 'add_product.html', {'form': form})
 
 def product_details(request, pk):
@@ -38,6 +38,6 @@ def send_email(request,pk):
     product=get_object_or_404(Product, pk=pk)
     subject=f"product details: {product.name}"
     message=f"Product Name: {product.name}\nPrice: {product.price}\nDescription: {product.description}"
-    send_email(subject, message, 'from@example.com', ['to@example.com'])
+    send_mail(subject, message, 'from@example.com', ['to@example.com'])
     return HttpResponse("Email sent successfully") 
     
