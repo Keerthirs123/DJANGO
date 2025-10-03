@@ -19,7 +19,7 @@ def add_product(request):
 
 def product_details(request, pk):
     product=get_object_or_404(Product, pk=pk)
-    return render(request, 'product_details.html', {'product': product})        
+    return render(request, 'product_detail.html', {'product': product})        
 
 def pdf_download(request, pk):
     product = get_object_or_404(Product, pk=pk)
