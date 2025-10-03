@@ -1,0 +1,60 @@
+h1{
+    color: orangered;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px grey;  
+}
+
+body{
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    margin: 10px;
+}
+.img1{
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;    
+    box-shadow: 2px 2px 5px grey;       
+    transition: transform 0.3s;
+    }
+.img1:hover{
+    transform: scale(1.05); 
+}
+
+.img2{
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;    
+    box-shadow: 2px 2px 5px grey;       
+    transition: transform 0.3s;
+    
+}
+.img2:hover{
+    transform: scale(1.05); 
+}
+.img3{
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;    
+    box-shadow: 2px 2px 5px grey;       
+    transition: transform 0.3s;
+}   
+.img3:hover{
+    transform: scale(1.05); 
+}
